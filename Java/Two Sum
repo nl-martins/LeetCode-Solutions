@@ -8,8 +8,11 @@
 
 class Solution {
     public int[] twoSum(int[] nums, int target) {
+        //iterate over the array nums 
         for(int x = 0; x<nums.length ; x++){
             for(int y = 0; y<nums.length ; y++){
+                //Checks that x and y aren't the same element
+                //Checks that the sum of elements is equal to the target
                 if( x!= y && nums[x]+nums[y] == target){
                     int [] suma = {x,y};
                     return suma;
