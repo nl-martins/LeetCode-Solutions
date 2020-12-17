@@ -3,6 +3,8 @@
 *   An integer is a palindrome when it reads the same backward as forward.
 */
 class Solution:
+    #the solution idea is to revert only half of the number and compare it with the other half
+    #In case of numbers with none digits, the middle number is ignored
     def isPalindrome(self, x: int) -> bool:
         if (x %10 == 0 and x != 0):
             return False;
