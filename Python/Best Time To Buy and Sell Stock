@@ -1,0 +1,15 @@
+class Solution(object):
+    def maxProfit(self, prices):
+        """
+        :type prices: List[int]
+        :rtype: int
+        """
+        max_profit = 0
+        max_val = 0
+        
+        #Iterate the list in reverse
+        for x in reversed(prices) :
+			    max_val = max(max_val,x)    #keep the maximum
+			    if max_val-x > max_profit : #compare current profit with maximum profit 
+				    max_profit = max_val - x  #store new maximum profit
+        return max_profit
