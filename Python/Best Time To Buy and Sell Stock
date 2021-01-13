@@ -6,7 +6,7 @@ class Solution(object):
         """
         max_profit = 0
         max_val = 0
-        
+        #adjusting tabs
         #Iterate the list in reverse
         for x in reversed(prices) :
 			max_val = max(max_val,x)   	 	#keep the maximum
