@@ -1,0 +1,23 @@
+class Solution(object):
+    def maxArea(self, height):
+        """
+        :type height: List[int]
+        :rtype: int
+        """
+        left = 0
+        right = len(height) - 1
+        max_area = 0
+        while(left < right) :
+			#take the minimum height of the two pointers
+            temp = height[left] if height[left] < height[right] else height[right]
+            #calculate the area
+			temp = temp * (right-left)
+			#take the maximum area
+            max_area = temp if temp > max_area else max_area   
+            #move the pointer of the minimum height
+			if(height[left] < height[right]) :
+                left += 1
+            else :
+                right -= 1
+
+        return max_area
